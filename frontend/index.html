@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Notes Management System</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ───── HEADER ───── -->
+    <header class="header">
+      <div class="header-badge">NoSQL Micro Project</div>
+      <div class="header-college">AVPTI Computer Department &nbsp;|&nbsp; 6th Sem A</div>
+      <h1 class="header-title">Student Notes<br />Management System</h1>
+      <p class="header-sub">Powered by MongoDB Atlas &amp; Node.js</p>
+    </header>
+
+    <!-- ───── MAIN CONTENT ───── -->
+    <main class="container">
+
+      <!-- ADD NOTE FORM -->
+      <section class="form-section">
+        <h2 class="section-title">Add New Note</h2>
+
+        <div class="form-card">
+          <!-- Title Input -->
+          <div class="input-group">
+            <label for="noteTitle">Note Title</label>
+            <input
+              type="text"
+              id="noteTitle"
+              placeholder="e.g. Chapter 5 - MongoDB Basics"
+            />
+          </div>
+
+          <!-- Description Textarea -->
+          <div class="input-group">
+            <label for="noteDesc">Description</label>
+            <textarea
+              id="noteDesc"
+              rows="4"
+              placeholder="Write your note details here..."
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button id="addNoteBtn" onclick="addNote()">
+            + Add Note
+          </button>
+
+          <!-- Status message shown after add -->
+          <p id="formMessage" class="form-message"></p>
+        </div>
+      </section>
+
+      <!-- ALL NOTES DISPLAY -->
+      <section class="notes-section">
+        <h2 class="section-title">
+          All Notes
+          <span id="notesCount" class="notes-count"></span>
+        </h2>
+
+        <!-- Notes will be injected here by script.js -->
+        <div id="notesContainer" class="notes-grid">
+          <!-- Loading state -->
+          <p class="loading-text">Loading notes...</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ───── FOOTER ───── -->
+    <footer class="footer">
+      <p>AVPTI &nbsp;·&nbsp; Computer Department &nbsp;·&nbsp; 6th Sem A &nbsp;·&nbsp; NoSQL Micro Project</p>
+    </footer>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
